@@ -107,7 +107,7 @@ volk_32fc_x2_divide_32fc_u_avx(lv_32fc_t* cVector, const lv_32fc_t* numeratorVec
         // best guide I found on using these functions: https://software.intel.com/sites/landingpage/IntrinsicsGuide/#expand=2738,2059,2738,2738,3875,3874,3875,2738,3870
         div = _mm256_div_ps(mul_conj,mag_sq);
 
-        _mm256_storeu_ps((float*) c, div); // Store the results back into the C container
+        _mm256_storeu_ps((float*) c, div); // Stores the results back into the C container
 
         a += 4;
         b += 4;
